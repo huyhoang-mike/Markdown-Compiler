@@ -21,4 +21,5 @@ from ImageDB import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
+    path('show/', views.show, name='home'),
 ]
