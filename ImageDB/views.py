@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Image
 import base64
 import numpy as np
-
+import pandas as pd 
 import os
 import cv2
 
@@ -10,7 +10,9 @@ from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 
 def explore(request):
-    return render(request, 'explore.html', {})
+    df = pd.read_csv(os.path.join('.','notebooks', 'df_list.csv'))
+    result = df.to_html()
+    return render(request, 'explore.html', {'result': result, 'df': df})
 
 
 # Create your views here.
