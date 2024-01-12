@@ -2,9 +2,17 @@ from django.shortcuts import render
 from .models import Image
 import base64
 import numpy as np
-from PIL import Image
+
 import os
 import cv2
+
+from keras.models import load_model  # TensorFlow is required for Keras to work
+from PIL import Image, ImageOps  # Install pillow instead of PIL
+
+def explore(request):
+    return render(request, 'explore.html', {})
+
+
 # Create your views here.
 
 # def index(request):
@@ -60,15 +68,37 @@ def index(request):
         file_name = default_storage.save(file.name, file)
         file_url = default_storage.path(file_name)
         dir = os.path.join('.','media')
-        for file in os.listdir(dir):
-            img = cv2.imread(os.path.join('.','media', file))
-            arr = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+        # Disable scientific notation for clarity
+        np.set_printoptions(suppress=True)
+        # Load the model
+        model = load_model("keras_model.h5", compile=False)
+        # Load the labels
+        class_names = open("labels.txt", "r").readlines()
+        data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+        for file in os.listdir(dir):
+            img_file = os.path.join('.','media', file)
+            # Replace this with the path to your image
+            image = Image.open(img_file).convert("RGB")
+            # resizing the image to be at least 224x224 and then cropping from the center
+            size = (224, 224)
+            image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
+            # turn the image into a numpy array
+            image_array = np.asarray(image)
+            # Normalize the image
+            normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
+            # Load the image into the array
+            data[0] = normalized_image_array
+            # Predicts the model
+            prediction = model.predict(data)
+            index = np.argmax(prediction)
+            class_name = class_names[index]
+            Class = class_name[2:]
         context = {
         'file_name': file_name,
         'file_url': file_url,
         'dir': dir,
-        'arr': arr,
+        'Class': Class,
         }
         return render(request, "index.html", context)
     else:

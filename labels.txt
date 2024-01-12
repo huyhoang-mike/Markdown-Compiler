@@ -1,0 +1,6 @@
+0 Lake
+1 Museum
+2 Church
+3 Zoo
+4 Garden
+5 Lounge
