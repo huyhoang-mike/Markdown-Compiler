@@ -4,6 +4,7 @@ import base64
 import numpy as np
 from PIL import Image
 import os
+import cv2
 # Create your views here.
 
 # def index(request):
@@ -58,8 +59,11 @@ def index(request):
         file = request.FILES["imageFile"]
         file_name = default_storage.save(file.name, file)
         file_url = default_storage.path(file_name)
-        dir = os.path.join('.','media','Predator-Beautiful-Fur-sumateran-Tiger-rainforest-animal_EpG3kBk.jpg')
-        arr = imread(dir)
+        dir = os.path.join('.','media')
+        for file in os.listdir(dir):
+            img = cv2.imread(os.path.join('.','media', file))
+            arr = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
         context = {
         'file_name': file_name,
         'file_url': file_url,
