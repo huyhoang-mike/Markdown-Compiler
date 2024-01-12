@@ -1,22 +1,9 @@
-<html>
-
-	<head>
-		<title>Image Search</title>
-	</head>
-
-	<body>
-		<!-- {% for x in obj %}
-		<div>
-            <h1>{{x.name}}</h1>
-			<h1> <img src="{{x.venue_image.url}}"> </h1>
-			<br>
-        </div>
-		{% endfor %} -->
-			<label for="avatar">Choose your favorite picture:</label>
-		<form action="% url 'show' %" method="post" enctype="multipart/form-data"></form>
-			{% csrf_token %}
-			<input name="imagefile" re accept="image/*" type="file" id="formFile">
-			<button type="submit">Scan</button>
-		</form>
-	</body>
-</html>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="imageFile" />
+    <input type="submit" name="submit" value="Upload" />
+</form>
+<br>
+{{dir}}
+<br>
+{{arr}}
