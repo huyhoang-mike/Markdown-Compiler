@@ -1,7 +1,7 @@
 # INTEGRATION PIPELINE MAPS INTO A WEBSITE
 
 ## INSTALLATION
-Download [QGIS]([https://pypi.org/project/pip/](https://qgis.org/en/site/forusers/download.html)) which is the software for creating, editing, visualising, analysing and publishing geospatial information. 
+Download [QGIS](https://qgis.org/en/site/forusers/download.html) which is the software for creating, editing, visualising, analysing and publishing geospatial information. 
 ## WORKFLOW
 ### STEP 1
 Firstly, you need to clone this [repository](https://pypi.org/project/pip/](https://github.com/huyhoang-mike/Tourist-Attractions-Recommendation-Software)) into your local machine.
