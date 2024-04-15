@@ -43,8 +43,8 @@ In my case, I clone the two repositories to the home directory in WSL. Folder st
 ![image](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/c8ef25cd-0892-49bb-ac12-27e24c8e0940)
 
 ### STEP 4: Set up conda environment
-At first, change the directory to htwo-map, then run `conda env create --file environment.yml` to create the environment. Then, you need to activate it by using `conda activate htwo_map`. Finally, run `snakemake -c1 build_doc` to export the pdf and html documentation. 
-\For your information: You must clone the ptx repository because snakemake requires the ptx-database in the workflow. 
+At first, change the directory to htwo-map, then run `conda env create --file environment.yml` to create the environment. Then, you need to activate it by using `conda activate htwo_map`. Finally, run `snakemake -c1 build_doc` to export the pdf and html documentation. \
+For your information: You must clone the ptx repository because snakemake requires the ptx-database in the workflow. 
 
 
 ## Video
