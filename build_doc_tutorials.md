@@ -47,7 +47,17 @@ At first, change the directory to htwo-map, then run `conda env create --file en
 <br/><br/>
 **For your information**: You must clone the ptx repository because snakemake requires the ptx-database in the workflow. 
 
-
-## Video
-
+### STEP 5: Open the pdf and html file
+After successfully runned snakemake, you can find the pdf and html at `/htwo-map/docs/build/`
+![image](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/9bd67042-f631-44fe-b5c5-5c3c0a6483d2)
+Finally, you need to copy the pdf and html folder into your local Windows by using these two commands:
+```
+cp -r html /mnt/c/Users/Admin/Downloads
+```
+```
+cp -r pdf /mnt/c/Users/Admin/Downloads
+```
+Remember to change directory (cd) to the `/htwo-map/docs/build/`, where it has the two folders.
+<br/><br/>
+**For your information**: In the context of Windows Subsystem for Linux (WSL), /mnt is used to access your Windows file system from within WSL. For example, /mnt/c/ corresponds to your C: drive in Windows. This allows for easy file sharing between Windows and WSL.
 
