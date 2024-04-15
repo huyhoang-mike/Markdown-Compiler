@@ -1,11 +1,10 @@
-# INTEGRATING PIPELINE MAPS INTO A WEBSITE WITH QGIS
-
-Let's say, I have a map with special information, and I want to integrate it into base maps. How can I achieve that? Let's follow the tutorials!
+# SET UP TO RUN SNAKEMAKE -C1 BUILD_DOC ON WINDOWS
+My task is to update the documentation for htwo-map, so I must run snakemake -c1 build_doc to compile the documentation on my local machine. Howerver, there are some dependencies and requirements for that. If you want to do so, please follow this tutorials.
 
 ## INSTALLATION
-
-Download [QGIS](https://qgis.org/en/site/forusers/download.html), which is software for creating, editing, visualising, analysing, and publishing geospatial information.
-
+There are two things that you have to install:
+- Download [Ubuntu Windows Subsystem Linux](https://ubuntu.com/desktop/wsl), which helps you run Linux on your Windows terminal.
+- Download [Anaconda for Linux 64-Bit (x86) Installer](https://www.anaconda.com/download/success), which helps you create the required environment from the environment.yml file.
 ## WORKFLOW
 
 ### STEP 1
