@@ -59,5 +59,5 @@ cp -r pdf /mnt/c/Users/Admin/Downloads
 ```
 Remember to change directory (cd) to the `/htwo-map/docs/build/`, where it has the two folders.
 <br/><br/>
-**For your information**: In the context of Windows Subsystem for Linux (WSL), /mnt is used to access your Windows file system from within WSL. For example, /mnt/c/ corresponds to your C: drive in Windows. This allows for easy file sharing between Windows and WSL.
+**For your information**: In the context of Windows Subsystem for Linux (WSL), `/mnt` is used to access your Windows file system from within WSL. For example, `/mnt/c/` corresponds to your `C:/` in Windows. This allows for easy file sharing between Windows and WSL.
 
