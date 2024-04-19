@@ -47,7 +47,14 @@ At first, change the directory to htwo-map, then run `conda env create --file en
 <br/><br/>
 **For your information**: You must clone the ptx repository because snakemake requires the ptx-database in the workflow. 
 
-### STEP 5: Open the pdf and html file
+### STEP 5: Get the ZENODO_ACCESS_TOKEN
+Some of our data is stored in a closed Zenodo repository, therefore we need to obtain tokens to enable an automized download. 
+The tokens are saved as linux environment variables. Ask the maintainers of the Hydrogen Map (e.g. leon1.schumm@oth-regensburg.de, falk.birett@oth-regensburg.de) for the `ZENODO_ACCESS_TOKEN` (called "personal access token" on zenodo) of the account info@wasserstoffatlas.de.
+<br/><br/>
+Then, find the `.bashrc` file in your local linux system e.g. with \\wsl$\Ubuntu\home\{username}. Open the file and add the following lines with the tokens obtained and noted before, e.g.
+export `ZENODO_ACCESS_TOKEN=zXZQp8Rl8qzXZQp8Rl8qzXZQp8Rl8qzXZQp8Rl8q` 
+
+### STEP 6: Open the pdf and html file
 After successfully runned snakemake, you can find the pdf and html at `/htwo-map/docs/build/`
 ![image](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/9bd67042-f631-44fe-b5c5-5c3c0a6483d2)
 Finally, you need to copy the pdf and html folder into your local Windows by using these two commands:
