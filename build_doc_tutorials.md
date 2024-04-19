@@ -11,6 +11,7 @@ There are two things that you have to install:
 ### STEP 1: Basic setup
 
 After install Ubuntu WSL, you should have a terminal like this, but without the (base).
+
 ![1](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/4efe4014-a3c3-4493-a94c-54fd487bfc12)
 
 
@@ -28,6 +29,7 @@ After change directory to the directory where Anaconda was downloaded, use the c
 bash Anaconda3-2024.02-1-Linux-x86_64.sh
 ```
 Now, you should have (base) in the your terminal like this:
+
 ![2](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/bb0959ac-6d5d-4c89-af51-3c8f723dd2a8)
 
 
@@ -42,6 +44,7 @@ git clone https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/htwo-
 https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/ptx-database.git
 ```
 In my case, I clone the two repositories to the home directory in WSL. Folder structure should be like this:
+
 ![3](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/5003ef66-6ffb-4039-9075-84f7790195a1)
 
 
@@ -54,13 +57,14 @@ At first, change the directory to htwo-map, then run `conda env create --file en
 Some of our data is stored in a closed Zenodo repository, therefore we need to obtain tokens to enable an automized download. 
 The tokens are saved as linux environment variables. Ask the maintainers of the Hydrogen Map (e.g. leon1.schumm@oth-regensburg.de, falk.birett@oth-regensburg.de) for the `ZENODO_ACCESS_TOKEN` (called "personal access token" on zenodo) of the account info@wasserstoffatlas.de.
 <br/><br/>
-Then, find the `.bashrc` file in your local linux system e.g. with \\wsl$\Ubuntu\home\{username}. Open the file and add the following lines with the tokens obtained and noted before, e.g.
+Then, find the `.bashrc` file in your local linux system e.g. with `\\wsl$\Ubuntu\home\{username}`. Open the file and add the following lines with the tokens obtained and noted before, e.g.
 export `ZENODO_ACCESS_TOKEN=zXZQp8Rl8qzXZQp8Rl8qzXZQp8Rl8qzXZQp8Rl8q` 
 <br/><br/>
 I recommend you follow [this instruction](https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/htwo-map) to get the ZENODO_ACCESS_TOKEN.
 
 ### STEP 6: Open the pdf and html file
 After successfully runned snakemake, you can find the pdf and html at `/htwo-map/docs/build/`
+
 ![image](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/9bd67042-f631-44fe-b5c5-5c3c0a6483d2)
 Finally, you need to copy the pdf and html folder into your local Windows by using these two commands:
 ```
