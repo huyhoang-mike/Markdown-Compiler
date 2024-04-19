@@ -47,13 +47,7 @@ In my case, I clone the two repositories to the home directory in WSL. Folder st
 
 ![3](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/5003ef66-6ffb-4039-9075-84f7790195a1)
 
-
-### STEP 4: Set up conda environment
-At first, change the directory to htwo-map, then run `conda env create --file environment.yml` to create the environment. Then, you need to activate it by using `conda activate htwo_map`. Finally, run `snakemake -c1 build_doc` to export the pdf and html documentation. 
-<br/><br/>
-**For your information**: You must clone the ptx repository because snakemake requires the ptx-database in the workflow. 
-
-### STEP 5: Get the ZENODO_ACCESS_TOKEN
+### STEP 4: Get the ZENODO_ACCESS_TOKEN
 Some of our data is stored in a closed Zenodo repository, therefore we need to obtain tokens to enable an automized download. 
 The tokens are saved as linux environment variables. Ask the maintainers of the Hydrogen Map (e.g. leon1.schumm@oth-regensburg.de, falk.birett@oth-regensburg.de) for the `ZENODO_ACCESS_TOKEN` (called "personal access token" on zenodo) of the account info@wasserstoffatlas.de.
 <br/><br/>
@@ -61,6 +55,13 @@ Then, find the `.bashrc` file in your local linux system e.g. with `\\wsl$\Ubunt
 export `ZENODO_ACCESS_TOKEN=zXZQp8Rl8qzXZQp8Rl8qzXZQp8Rl8qzXZQp8Rl8q` 
 <br/><br/>
 I recommend you follow [this instruction](https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/htwo-map) to get the ZENODO_ACCESS_TOKEN.
+
+### STEP 5: Set up conda environment
+At first, change the directory to htwo-map, then run `conda env create --file environment.yml` to create the environment. Then, you need to activate it by using `conda activate htwo_map`. Finally, run `snakemake -c1 build_doc` to export the pdf and html documentation. 
+<br/><br/>
+**For your information**: You must clone the ptx repository because snakemake requires the ptx-database in the workflow. 
+
+
 
 ### STEP 6: Open the pdf and html file
 After successfully runned snakemake, you can find the pdf and html at `/htwo-map/docs/build/`
