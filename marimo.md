@@ -40,6 +40,9 @@ Options:
   --base-url TEXT     Base URL for the server. Should start with a /.
   --help              Show this message and exit.
 ```
+![vi](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/3cc70f94-a657-4ef3-9633-3ed05f4703ce)
+
+
 ## Version Control with Git
 You may have tried, and failed, to version your notebooks with git — you changed just one line of code, but the git diff showed an enormous change in 
 the notebook’s JSON representation. You likely have directories cluttered with dozens of UntitledXX.ipynb files — some of which 
