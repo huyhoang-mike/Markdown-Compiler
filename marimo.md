@@ -5,8 +5,12 @@ Marimo is an open-source reactive notebook for Python that’s reproducible, git
 Run a cell and marimo reacts by automatically running the cells that reference its variables, eliminating the error-prone task of manually re-running cells. 
 Delete a cell and marimo scrubs its variables from program memory, eliminating hidden state.
 
+![marimo](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/af307e4b-31a8-4867-95d1-30b400defc1a)
+
 Hidden state — where a variable no longer exists in your code, but still exists in program memory. You’ve almost certainly received a notebook from a colleague that 
 utterly failed to reproduce — when you ran it, you saw outputs different from the ones serialized in the notebook (or maybe it didn’t run at all!). 
+
+![jupyter](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/c1e7743c-2566-487b-9f2e-6bf3c5db2d5f)
 
 ## Execute as a Script or an App
 You can run marimo notebooks as scripts at the command line, just like any other Python script. For example,
@@ -45,6 +49,7 @@ Marimo save notebooks in .py format so that you can use Git easily.
 
 ## Built-in VS Code Extension
 Use side by side in VS Code or open in seperate browser like Jupyter.
+![image](https://github.com/huyhoang-mike/Markdown-Compiler/assets/109945762/ad4ff4da-d9bf-4bc4-b1d8-cc640c552699)
 
 ## Jupyter notebook conversion
 Automatically translate Jupyter notebooks to marimo notebooks with `marimo convert`:
