@@ -21,7 +21,7 @@ Then change directory to the place where you installed. In my case, I use the co
 cd mnt/c/Users/Admin/Downloads
 ```
 ### STEP 2: Install Anaconda on WSL
-After change directory to the directory where Anaconda was downloaded, use the command below to start installing Anaconda: 
+After change directory to the directory where Anaconda was downloaded, use the command below to start installing Anaconda on WSL terminal: 
 ```
 bash Anaconda3-2024.02-1-Linux-x86_64.sh
 ```
@@ -42,4 +42,6 @@ Next, I change the directory to h2g-africa, then run `conda env create --file en
 
 
 ### STEP 5: Open the notebooks or scripts
-After successfully running snakemake, you can debug any scripts or jupyter notebooks. Remember to select the kernel to `htwo_map` 
+After successfully running snakemake, you can use the `Remote Window` on the bottom-left of [VS Code](https://code.visualstudio.com/Download). Then, click `Connect to WSL` and open the folder **h2g-africa**. 
+<br/><br/>
+Finally, you can debug any scripts or jupyter notebooks on VS Code. If you would like to run Jupyter Notebook, please remember to select the kernel to `htwo_map` which we already set up before using Anaconda. 
