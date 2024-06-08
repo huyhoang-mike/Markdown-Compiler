@@ -32,7 +32,6 @@ The h2g-africa: clone it using **https** method
 ```
 git clone https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/h2g-africa.git
 ```
-In my case, I clone the two repositories to the **home** directory in WSL. Folder structure should be like this:
 
 ### STEP 4: Set up conda environment
 At first, you need to have the `environment.yml` file in the repository because h2g-africa does not have the environment file. In my case, I used the [file](https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/htwo-map/-/blob/develop/environment.yml) from the hydrogen map project. 
