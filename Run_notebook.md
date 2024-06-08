@@ -1,5 +1,7 @@
-# SET UP TO RUN NOTEBOOK ON WINDOWS 10
-How to run jupyter notebooks or other python scripts on your local machine.
+# RUN SCRIPTS AND NOTEBOOKS FROM H2G-AFRICA REPOSITORY
+I have just started to work on the `h2g-africa` project, but I could not run all the scripts and jupyter notebooks from the repository. How could I install and set up the environment to run them sucessfully on Windows 10? This tutorials will be giving you the idea. 
+<br/><br/>
+For Windows 11, it is slightly different in the version of Anaconda and WSL. Other steps are still the same! 
 
 ## INSTALLATION
 There are two things that you have to install:
