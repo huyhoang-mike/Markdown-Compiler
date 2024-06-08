@@ -35,11 +35,11 @@ git clone https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/h2g-a
 In my case, I clone the two repositories to the **home** directory in WSL. Folder structure should be like this:
 
 ### STEP 4: Set up conda environment
-At first, you need to have the *environment.yml* file in the repository because h2g-africa does not have the environment file. In my case, I used the [file](https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/htwo-map/-/blob/develop/environment.yml) from the hydrogen map project. 
+At first, you need to have the `environment.yml` file in the repository because h2g-africa does not have the environment file. In my case, I used the [file](https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/htwo-map/-/blob/develop/environment.yml) from the hydrogen map project. 
 <br/><br/>
 Next, I change the directory to h2g-africa, then run `conda env create --file environment.yml` to create the environment. Then, you need to activate it by using `conda activate htwo_map`. Finally, run `snakemake -j 1 all
 ` to install all the required data. 
 
 
 ### STEP 5: Open the notebooks or scripts
-After successfully running snakemake, you can debug any scripts or jupyter notebooks. Remember to select the kernel to *htwo_map* 
+After successfully running snakemake, you can debug any scripts or jupyter notebooks. Remember to select the kernel to `htwo_map` 
