@@ -15,26 +15,21 @@ There are two things that you have to install:
 - Download [Ubuntu Windows Subsystem Linux](https://ubuntu.com/desktop/wsl), which helps you run Linux on your Windows terminal.
 - Download [Anaconda for Linux 64-Bit (x86) Installer](https://www.anaconda.com/download/success), which helps you create the required environment from the environment.yml file.
 
-### STEP 2: Setup
+### STEP 2: Setup 
 
-After install Ubuntu WSL, you should open the WSL terminal, without the (base).
+After install Ubuntu WSL, you should open the WSL terminal.
 
-Change directory (cd) to where you have installed [Anaconda for Linux 64-Bit (x86) Installer](https://www.anaconda.com/download/success). Firstly, the default directory is at "root", so you should be back to one subdirectory by using:
-```
-cd ..
-```
-Then change directory to the place where you installed. In my case, I use the command:
+Change directory (cd) to where you have installed [Anaconda for Linux 64-Bit (x86) Installer](https://www.anaconda.com/download/success). In my case, I use the command:
 ```
 cd mnt/c/Users/Admin/Downloads
 ```
-### STEP 3: Install Anaconda on WSL
-After change directory to the directory where Anaconda was downloaded, use the command below to start installing Anaconda on WSL terminal: 
+Then use the command below to start installing Anaconda on WSL terminal: 
 ```
 bash Anaconda3-2024.02-1-Linux-x86_64.sh
 ```
-Now after installing Anaconda, you should have (base) in the your terminal.
+Now you should have (base) in the your terminal.
 
-### STEP 4: Clone repository
+### STEP 3: Clone repository
 Clone the **h2g-africa** repository with submodules
 ```
 git clone --recursive https://gitlab.oth-regensburg.de/EI/Labore/fenes/energiespeicher/h2g-africa.git
@@ -54,11 +49,10 @@ sudo apt-get install unrar
 snakemake -j 1 all
 ``` 
 
-
-### STEP 5: Open the notebooks or scripts
+### STEP 5: Run notebooks or scripts
 After successfully running snakemake, you can use the `Remote Window` on the bottom-left of [VS Code](https://code.visualstudio.com/Download). Then, click `Connect to WSL` and open the folder **h2g-africa**. 
 <br/><br/>
-Finally, you can debug any scripts or jupyter notebooks on VS Code. If you would like to run Jupyter Notebook, please remember to select the kernel to `htwo_map` which we already set up before using Anaconda. 
+Finally, you can debug any scripts or jupyter notebooks on VS Code. If you would like to run Jupyter Notebook, please remember to select the kernel to `pypsa-earth` which we already set up before using Anaconda. 
 
 
 
